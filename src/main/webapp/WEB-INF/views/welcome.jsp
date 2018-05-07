@@ -36,8 +36,8 @@
 
       <div class="blueBannerHeading">
         <h1 class="blueBannerTitleWithSubtitle">
-          <a style="color: #ffffff">0507 Chatbot</a>&nbsp;,
-            <a style="color: #ffffff">帮助您更好的运维Kubernetes集群</a>
+          <a style="color: #ffffff">Chatbot</a>&nbsp;,
+            <a style="color: #ffffff">帮助您更好的运维Kubernetes集群 Code@SZ</a>
         </h1>
       </div>
 
@@ -61,7 +61,7 @@
               </p>              
               <div>
                 <img max-width="100%" height="auto"
-                  src="images/wercker-springboot.jpg"><br>
+                  src="images/wercker-springboot-chatbot.png"><br>
                   <br>
               </div>
 
