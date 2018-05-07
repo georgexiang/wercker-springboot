@@ -37,7 +37,7 @@
       <div class="blueBannerHeading">
         <h1 class="blueBannerTitleWithSubtitle">
           <a style="color: #ffffff">Chatbot</a>&nbsp;,
-            <a style="color: #ffffff">帮助您更好的运维Kubernetes集群 Code@SZ</a>
+            <a style="color: #ffffff">帮助您更好的运维Kubernetes集群 Code@SZ 0508 </a>
         </h1>
       </div>
 
@@ -50,7 +50,7 @@
   <div class="container serviceContainer" style="margin-top: 150px;">
     <div class="overviewLayout">
       <div>
-              <br>SpringBoot  application demo by George Xiang test .  Current server time: <%= new java.util.Date() %> <br>
+              <br>SpringBoot  application demo . Current server time: <%= new java.util.Date() %> <br>
               <br>
               <p>
                 <span style="color: #333; text-decoration: none">Build faster and release often with Wercker's Docker-Native 
