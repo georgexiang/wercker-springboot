@@ -11,7 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan
+@ComponentScan  
 @EnableAutoConfiguration
 public class DemoApplication extends SpringBootServletInitializer {
 

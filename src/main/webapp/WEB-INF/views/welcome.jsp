@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <style type="text/css">
-</style>
+</style> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" href="css/cloud3.css">
@@ -36,7 +36,7 @@
 
       <div class="blueBannerHeading">
         <h1 class="blueBannerTitleWithSubtitle">
-          <a style="color: #ffffff">Chatbot</a>&nbsp;+
+          <a style="color: #ffffff">0507 Chatbot</a>&nbsp;,
             <a style="color: #ffffff">帮助您更好的运维Kubernetes集群</a>
         </h1>
       </div>
