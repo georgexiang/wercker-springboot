@@ -36,8 +36,8 @@
 
       <div class="blueBannerHeading">
         <h1 class="blueBannerTitleWithSubtitle">
-          <a style="color: #ffffff">Oracle Container Cloud Service</a>&nbsp;+
-            <a style="color: #ffffff">Wercker</a>
+          <a style="color: #ffffff">Chatbot</a>&nbsp;+
+            <a style="color: #ffffff">帮助您更好的运维Kubernetes集群</a>
         </h1>
       </div>
 

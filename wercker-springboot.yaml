@@ -1,11 +1,11 @@
 apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: wercker-springboot-deployment
+  name: wercker-springboot
   labels:
    app: wercker-springboot
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: wercker-springboot
@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: wercker-springboot
+        #image: registry.hub.docker.com/v2/georgexiang/wercker-springboot:latest
         image: index.docker.io/georgexiang/wercker-springboot:latest
         ports:
         - containerPort: 8080  
@@ -23,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: wercker-springboot-service
+  name: wercker-springboot
 spec:
   type: NodePort
   ports:
