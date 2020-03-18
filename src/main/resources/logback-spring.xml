@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
  
-    <property name="LOGS" value="./logs" />
+    <property name="LOGS" value="/tmp/springlogs" />
  
     <appender name="Console"
         class="ch.qos.logback.core.ConsoleAppender">
@@ -34,7 +34,7 @@
 
     <appender name="SevereRollingFile"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/severe-logger.log</file>
+        <file>${LOGS}/spring-boot-severe-logger.log</file>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>WARN</level>
         </filter>
@@ -46,7 +46,7 @@
         <rollingPolicy
             class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily and when the file reaches 10 MegaBytes -->
-            <fileNamePattern>${LOGS}/archived/severe-logger-%d{yyyy-MM-dd}.%i.log
+            <fileNamePattern>${LOGS}/archived/spring-boot-severe-logger-%d{yyyy-MM-dd}.%i.log
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -59,10 +59,10 @@
     <root level="info">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
-        <appender-ref ref="SevereRollingFile" />
+       
     </root>
      
-    <!-- LOG "com.plantplaces.*" at TRACE level -->
+    <!-- LOG "com.example" at TRACE level -->
     <logger name="com.example" level="trace" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />

@@ -24,7 +24,7 @@ public class RestAPI  {
     
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
-    Logger logger = LoggerFactory.getLogger(getClass());
+//    Logger logger = LoggerFactory.getLogger(getClass());
     
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
@@ -32,29 +32,36 @@ public class RestAPI  {
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         
             System.out.println("****out test *****");
-            logger.debug(" ***  restapi greeting **");
+            LOGGER.debug(" ***  restapi greeting **");
         
-            LOGGER.debug("This is a debug message"+name);
-            LOGGER.info("This is an info message"+name);
-            LOGGER.warn("This is a warn message"+name);
-            LOGGER.error("This is an error message"+name);
- 
-        return new Greeting(counter.incrementAndGet(),
+         
+            Greeting retGreeting=new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
+            
+            LOGGER.debug("This is a debug message:"+name);
+            LOGGER.info("This is an info message:"+name);
+            if(name.equals("bad")){
+                LOGGER.warn("This is a warn message: "+name);
+                LOGGER.error("This is an error message: "+name);    
+            }
+            LOGGER.info("return msg:"+retGreeting.toString());
+            
+        return retGreeting ;
     }
     
     @RequestMapping("/")
     public String defalut(@RequestParam(value="name", defaultValue="World") String name) {
         
             System.out.println("****out test *****");
-            logger.debug(" ***  restapi greeting **");
+            LOGGER.debug(" ***  restapi greeting **");
         
             LOGGER.debug("This is a debug message");
             LOGGER.info("This is an info message");
-            LOGGER.warn("This is a warn message");
-            LOGGER.error("This is an error message");
- 
-        return "Thist is springboot test ";
+            
+            
+            String msg="Thist is springboot test \n ";
+            LOGGER.info("return msg:"+ msg); 
+        return msg ;
     }
     
    
